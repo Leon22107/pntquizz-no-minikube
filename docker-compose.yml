@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8080:80"
+    container_name: frontend-container
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8081:8000"
+    container_name: backend-container
